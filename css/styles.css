@@ -1,0 +1,373 @@
+/* Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Montserrat Italic */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Montserrat Bold Italic */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Ejemplo de uso */
+body {
+    font-family: 'Montserrat';
+    color: #274371;
+}
+
+h1 {
+    font-weight: bold;
+    color: #274371;
+}
+
+em {
+    font-style: italic;
+    color: #274371;
+}
+
+
+/* Quita margen y padding para evitar espacio entre elementos */
+header {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo del menú de navegación */
+.navbar-nav .nav-link {
+    font-family: 'Montserrat';
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 10px;
+    /* Mayor espacio para la línea de subrayado */
+    overflow: hidden;
+    /* Para que la línea no se vea al estar fuera de su área */
+}
+
+/* Agregar una línea fina entre cada elemento del menú */
+.navbar-nav .nav-item:not(:last-child) .nav-link {
+    border-right: 1px solid #ffffff50;
+    /* Línea fina translúcida */
+    padding-right: 30px;
+}
+
+/* Subrayado animado al pasar el mouse */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    /* Ancho de la línea de subrayado */
+    height: 2px;
+    background-color: white;
+    left: 25%;
+    /* Centrará la línea debajo de la palabra */
+    bottom: 0;
+    transform: translateY(100%);
+    /* Empieza fuera de la vista */
+    transition: transform 0.3s ease-out;
+    /* Transición suave */
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: translateY(0);
+    /* Hace que la línea suba desde abajo */
+}
+
+
+
+/* Asegura que la imagen esté pegada al menú */
+header img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hacer el botón hamburguesa más grande y visible */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+    /* Cambia a color blanco */
+}
+
+/* Animación de desvanecimiento y desplazamiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+        /* Desplazar la imagen hacia arriba */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Volver a su posición original */
+    }
+}
+
+header img {
+    animation: fadeIn 2s ease-out;
+    /* Aplica la animación durante 1 segundo */
+}
+
+/* Estilos para la flecha de regreso al menú */
+.back-to-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #274371;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    /* Oculta el botón inicialmente */
+}
+
+/* Mostrar el botón cuando se hace scroll */
+.back-to-menu.show {
+    display: block;
+}
+
+.back-to-menu i {
+    font-size: 30px;
+    /* Ajusta el tamaño del ícono */
+}
+
+.nosotros-container {
+    text-align: justify;
+    max-width: 921px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: #274371;
+}
+
+.btn-fish {
+    width: 70%;
+}
+
+#mainImage {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+#mainImage.scrolled {
+    filter: blur(5px);
+    /* Desenfoque */
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 80px;
+    /* Ajusta el ancho de las flechas */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    /* Ajusta el tamaño del icono */
+    height: 40px;
+    /* Ajusta el tamaño del icono */
+    filter: invert(39%) sepia(61%) saturate(1193%) hue-rotate(182deg) brightness(93%) contrast(92%);
+}
+
+.etiqueta-bajo-en-sodio {
+    position: absolute;
+    top: 60px;
+    /* Ajusta según lo que necesites */
+    right: 10px;
+    /* Alineación a la derecha */
+    color: #636363;
+    /* Color de la etiqueta */
+    padding: 5px 10px;
+    font-size: 18px;
+    /* Tamaño de la etiqueta */
+    font-weight: bold;
+    border-radius: 5px;
+    /* Opcional: redondear esquinas */
+    transform: rotate(45deg);
+    /* Rotar para dar el efecto de sello */
+    z-index: 10;
+    /* Asegura que esté por encima de la imagen */
+    background-color: transparent;
+    /* Sin fondo, solo el texto */
+}
+
+.etiqueta-bajo-en-sodio::before,
+.etiqueta-bajo-en-sodio::after {
+    content: "";
+    /* Crea un contenido vacío para las líneas */
+    position: absolute;
+    /* Posiciona las líneas */
+    width: 200px;
+    /* Ajusta el ancho de las líneas */
+    height: 2px;
+    /* Altura de las líneas */
+    background-color: #636363;
+    /* Color de las líneas */
+}
+
+.etiqueta-bajo-en-sodio::before {
+    top: -10px;
+    /* Ajusta la posición de la línea superior */
+    left: -15px;
+    /* Posición horizontal de la línea superior */
+}
+
+.etiqueta-bajo-en-sodio::after {
+    bottom: -10px;
+    /* Ajusta la posición de la línea inferior */
+    left: -15px;
+    /* Posición horizontal de la línea inferior */
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 576px) {
+
+    /* Cambia 576px según tu necesidad */
+    .back-to-menu {
+        padding: 5px;
+        /* Reduce el padding */
+        font-size: 18px;
+        /* Reduce el tamaño de la fuente */
+        right: 10px;
+        /* Ajusta la posición a la derecha */
+        bottom: 10px;
+        /* Ajusta la posición hacia abajo */
+        height: 80px;
+    }
+
+    .back-to-menu i {
+        font-size: 15px;
+        /* Ajusta el tamaño del ícono */
+    }
+
+    .nosotros-container {
+        /*text-align: justify;*/
+        /*max-width: 921px;*/
+        /*margin: 0 auto;*/
+        font-size: 20px;
+        font-family: Montserrat;
+        color: #274371;
+    }
+
+    .btn-fish {
+        width: 40%;
+    }
+
+    /* h5{
+color: #274371;
+}
+
+p{
+color: #274371;
+} */
+}
+
+.carousel-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.carousel-image {
+    transition: opacity 0.3s ease;
+}
+
+.carousel-link:hover .carousel-image {
+    opacity: 0.7;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-link:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+.footer-scroll {
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    /* Añade un poco de margen superior si es necesario */
+}
+
+/* Animación de deslizamiento desde los costados */
+.slide-in-left,
+.slide-in-right {
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-in-left {
+    transform: translateX(-150px);
+    /* Desplaza desde la izquierda */
+}
+
+.slide-in-right {
+    transform: translateX(150px);
+    /* Desplaza desde la derecha */
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+    /* Se centra en el viewport */
+}
