@@ -170,6 +170,15 @@ header img {
     color: #274371;
 }
 
+.marcapropia-container {
+    text-align: justify;
+    max-width: 921px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: #274371;
+}
+
 .btn-fish {
     width: 70%;
 }
