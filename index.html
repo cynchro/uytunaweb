@@ -9,61 +9,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-    /* Hacer que el body y el contenedor principal ocupen toda la altura */
-    body, html {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-    }
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .container {
-        flex: 1; /* Permite que la sección principal ocupe todo el espacio restante */
-        display: flex;
-        flex-direction: column;
-    }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #274371
+        }
 
-    .custom-row {
-        font-family: 'Montserrat';
-        background-color: #274371;
-        color: white;
-        padding: 20px;
-        margin: 0;
-        flex: 1; /* Ocupa el espacio restante */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .custom-row {
+            font-family: 'Montserrat';
+            background-color: #274371;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .custom-heading {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #f8f9fa;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
+        .custom-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f8f9fa;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
 
-    .custom-text {
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: #d1d7e0;
-    }
+        .custom-text {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #d1d7e0;
+        }
 
-    .btn-primary {
-        background-color: #446FB6;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        font-weight: bold;
-        border-radius: 25px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+        .btn-primary {
+            background-color: #446FB6;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
 
-    .btn-primary:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
-</style>
-
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
@@ -82,6 +81,11 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav" style="text-align:left">
                             <li class="nav-item">
+                                <a class="nav-link" href="Catalogo.pdf" target="_blank"><div class="bell-container">
+                                    <i class="fa-regular fa-bell bell"></i>
+                                  </div>&nbsp;Descargar Catálogo</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="nosotros.html">¿Quiénes somos?</a>
                             </li>
                             <li class="nav-item">
@@ -99,19 +103,53 @@
             </nav>
         </header>
 
-        <div class="row">
-            <img id="" src="./images/UYTUNA_image_1.png" alt="UYTUNA Image 1" class="img-fluid">
+        <!-- Carrusel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div> -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/UYTUNA_image_1.png" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./atun1.png" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./atun2.png" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        
+
+        <div class="custom-highlight-section text-center my-4 p-4">
+            <h1 class="custom-highlight-title mb-3">BIENVENIDOS A UYTUNA</h1>
+            <h3 class="custom-highlight-subtitle mb-4">PIONEROS EN LA CONSERVA DE ATÚN EN URUGUAY</h3>
+            <p class="custom-highlight-text">
+                En UYTuna, estamos orgullosos de ser la primera industria de conserva de atún en Uruguay. 
+                Además, contamos con más de 15 años de experiencia a nivel internacional, lo que nos permite llegar 
+                con nuestros productos a todo el mundo, posicionándonos como una marca innovadora y confiable. <a href="nosotros.html" style="text-decoration: none;">Leer más...</a>
+            </p>
+        </div>
+        <!-- Sección de información -->
         <div class="row custom-row align-items-center justify-content-center p-4">
-    <div class="col-12 col-md-8 text-center">
-        <h2 class="custom-heading mb-3">¿Listo para crear tu propia marca de atún?</h2>
-        <p class="custom-text mb-4">Haz clic en el botón para conocer más sobre cómo podemos ayudarte.</p>
-        <a href="marca_propia.html" class="btn btn-primary btn-lg shadow-sm">
-            <i class="fas fa-info-circle"></i> Conocer más
-        </a>
-    </div>
-</div>
+            <div class="col-12 col-md-8 text-center">
+                <h2 class="custom-heading mb-3">¿Listo para crear tu propia marca de atún?</h2>
+                <p class="custom-text mb-4">Haz clic en el botón para conocer más sobre cómo podemos ayudarte.</p>
+                <a href="marca_propia.html" class="btn btn-primary btn-lg shadow-sm">
+                    <i class="fas fa-info-circle"></i> Conocer más
+                </a>
+            </div>
+        </div>
 
     </div>
 
@@ -120,5 +158,103 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<style>
+    .custom-highlight-section {
+        background-color: #f8f9fa;
+        border: 2px solid #274371;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        color: #274371;
+    }
+
+    .custom-highlight-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #274371;
+        text-transform: uppercase;
+    }
+
+    .custom-highlight-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #446FB6;
+    }
+
+    .custom-highlight-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: #333;
+    }
+    .bell-container {
+  display: inline-block;
+  position: relative;
+}
+
+.bell {
+  font-size: 17px;
+  color: #F36065;
+  animation: ring 1s ease-in-out infinite;
+}
+
+/* Efecto de "campana sonando" */
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+</style>
+<style>
+    /* Animación de deslizamiento desde la izquierda */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de deslizamiento desde la derecha */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicar la animación al primer bloque */
+.custom-highlight-section {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Aplicar la animación al segundo bloque */
+.custom-row {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+</style>
 
 </html>
