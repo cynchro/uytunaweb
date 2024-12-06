@@ -10,6 +10,82 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
+    <style>
+        .image-text-container {
+            display: inline-block;
+            /* Hace que el contenedor se ajuste al contenido */
+            text-align: center;
+            /* Centra el texto */
+            width: fit-content;
+            /* El ancho se ajusta al contenido, específicamente a la imagen */
+            /* background-color: #254777; */
+        }
+
+        .image-text-container img {
+            display: block;
+            /* Evita el espacio en línea entre la imagen y el texto */
+            /* width: 100%; */
+            /* Asegura que la imagen sea responsiva */
+        }
+
+        .text-container {
+            background-color: #254777;
+            width: 100%;
+            /* Igual al ancho de la imagen */
+            box-sizing: border-box;
+            /* Incluye padding y border en el ancho total */
+            /* margin-top: 10px; */
+            /* Separación entre imagen y texto */
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .text-alternativo-container {
+            background-color: #254777;
+            width: 100%;
+            /* Igual al ancho de la imagen */
+            box-sizing: border-box;
+            /* Incluye padding y border en el ancho total */
+            /* margin-top: 10px; */
+            /* Separación entre imagen y texto */
+            color: white;
+            /* margin-bottom: 30px; */
+        }
+
+        .fish-container {
+            background-color: #274371;
+            width: 100%;
+            /* Igual al ancho de la imagen */
+            box-sizing: border-box;
+            /* Incluye padding y border en el ancho total */
+            margin-top: 10px;
+            /* Separación entre imagen y texto */
+            margin-bottom: 30px;
+        }
+
+        .extra-image {
+            background-color: #274371;
+            /* Color de fondo */
+            display: block;
+            /* Asegura que ocupe todo el ancho disponible */
+            width: 100%;
+            /* Igual al ancho del contenedor padre */
+            /* padding: 10px; Espaciado alrededor de la imagen */
+            margin-top: 50px;
+            /* Separación entre el texto/imagen y este bloque */
+            border-radius: 8px;
+            /* Opcional: Bordes redondeados */
+            text-align: center;
+            /* Centra la imagen dentro del bloque */
+        }
+
+
+        .extra-image img {
+            display: block;
+            margin: 0 auto;
+            /* width: 100%; Escala dentro del ancho del contenedor */
+        }
+    </style>
 
 </head>
 
@@ -20,8 +96,8 @@
             <!-- Navbar con hamburguesa para dispositivos móviles -->
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #274371;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" style="margin-left: 30px;" href="index.html"><img src="fish.png" alt="UYTUNA"
-                            class="img-fluid"></a>
+                    <a class="navbar-brand" style="margin-left: 30px;" href="index.html"><img src="fish.png"
+                            alt="UYTUNA" class="img-fluid"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -32,13 +108,13 @@
                                 <a class="nav-link" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#lomitos">Pouch Lomitos de Atún</a>
+                                <a class="nav-link" href="#lomitos">Pouch Lomo de Atún</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#trozos">Pouch Trozos de Atún</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#lomitostrozos">Pouch lomitos y Trozos de Atún</a>
+                                <a class="nav-link" href="#lomitostrozos">Pouch lomo y Trozos de Atún</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#exhibidores">Pack Exhibidores</a>
@@ -50,17 +126,168 @@
             <!-- <img id="" src="UYTUNA_image_1.png" alt="UYTUNA Image 1" class="img-fluid"> -->
         </header>
 
-<br><br><br>
-        <section id="lomitos" class="mb-5" style="text-align: center;">
-            <p style="font-family: Montserrat, bold;text-decoration: underline; text-underline-offset: 5px; font-size: 30px;"><strong>POUCH LOMITOS DE ATÚN</strong></p>
-            <br><br>
-<img src="lomitos_atun_full.jpg" class="img-fluid">
-            </div>
-
-
-        </section>
-
         <br><br><br>
+
+        <section id="lomitos" class="mb-5 text-center">
+            <p
+                style="font-family: Montserrat, bold; text-decoration: underline; text-underline-offset: 5px; font-size: 30px;">
+                <strong>POUCH LOMO DE ATÚN</strong>
+            </p>
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <!-- Contenedor para la imagen y el texto -->
+                    <div class="image-text-container">
+                        <img src="images/pouch_lomo_atun/lomo_atun_fotos.png" class="img-fluid">
+                        <div class="text-container">
+                            <div style="font-weight: bold;">TIPO</div>
+                            <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                            <br/>
+                        </div>
+                        <img src="images/pouch_lomo_atun/lomo_atun_indicaciones.png" class="img-fluid">
+                        <!-- Extra Image moved here -->
+                        <!-- <div class="extra-image">
+                            <img src="fish.png" class="img-fluid">
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="trozos" class="mb-5 mt-5 text-center">
+            <p
+                style="font-family: Montserrat, bold; text-decoration: underline; text-underline-offset: 5px; font-size: 30px;">
+                <strong>POUCH TROZOS DE ATÚN</strong>
+            </p>
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <!-- Contenedor para la imagen y el texto -->
+                    <div class="image-text-container">
+                        <img src="images/pouch_trozos_atun/trozos_atun_fotos.png" class="img-fluid">
+                        <div class="text-container">
+                            <div style="font-weight: bold;">TIPO</div>
+                            <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                            <br/>
+                        </div>
+                        <img src="images/pouch_trozos_atun/trozos_atun_indicaciones.png" class="img-fluid">
+                        <!-- Extra Image moved here -->
+                        <!-- <div class="extra-image">
+                            <img src="fish.png" class="img-fluid">
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="lomitostrozos" class="mb-5 mt-5 text-center">
+            <p
+                style="font-family: Montserrat, bold; text-decoration: underline; text-underline-offset: 5px; font-size: 30px;">
+                <strong>POUCH LOMOS Y TROZOS DE ATÚN</strong>
+            </p>
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <!-- Contenedor para la imagen y el texto -->
+                    <div class="image-text-container">
+                        <div class="text-alternativo-container">
+                            <br/><br/>
+                            <div style="font-weight: bold;">TIPO</div>
+                            <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                            <br/>
+                        </div>
+                        <img src="images/pouch_lomo_trozos_atun/trozos_atun_fotos_indicaciones.png" class="img-fluid">
+                        <!-- <div class="text-container">
+                            <div style="font-weight: bold;">TIPO</div>
+                            <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                            <br/>
+                        </div>
+                        <img src="images/pouch_trozos_atun/trozos_atun_indicaciones.png" class="img-fluid"> -->
+                        <!-- Extra Image moved here -->
+                        <!-- <div class="extra-image">
+                            <img src="fish.png" class="img-fluid">
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="exhibidores" class="mb-5 mt-5 text-center">
+            <p
+                style="font-family: Montserrat, bold; text-decoration: underline; text-underline-offset: 5px; font-size: 30px;">
+                <strong>PACK EXHIBIDORES</strong>
+            </p>
+            <br><br>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <!-- Contenedor para la imagen y el texto -->
+                    <div class="image-text-container">
+                        <!-- <div class="text-alternativo-container">
+                            <br/><br/>
+                            <div style="font-weight: bold;">PACK EXHIBIDORES</div>
+                            <hr>
+                            <p class="mb-0">CANTIDAD DE BOLSAS</p><br/>
+                            <p class="mb-0"><b>120GR</b> | 16 UNIDADES | CAJA MASTER 8 UNIDADES</p>
+                            <p class="mb-0"><b>250GR</b> | 12 UNIDADES | CAJA MASTER 4 UNIDADES</p>
+                            <p class="mb-0"><b>500GR</b> | 8 UNIDADES | CAJA MASTER ÚNICA</p>
+                            <p class="mb-0"><b>1KG</b> | 12 UNIDADES | CAJA MASTER ÚNICA</p>
+                            <hr>
+                            <br/>
+                        </div> -->
+                        <div class="text-alternativo-container">
+                            <br/><br/>
+                            <div style="font-weight: bold;">PACK EXHIBIDORES</div>
+                            <hr>
+                            <p class="mb-0">CANTIDAD DE BOLSAS</p><br/>
+                            <p class="mb-0"><b>120GR</b> | 16 UNIDADES | CAJA MASTER 8 UNIDADES</p>
+                            <p class="mb-0"><b>250GR</b> | 12 UNIDADES | CAJA MASTER 4 UNIDADES</p>
+                            <p class="mb-0"><b>500GR</b> | 8 UNIDADES | CAJA MASTER ÚNICA</p>
+                            <p class="mb-0"><b>1KG</b> | 12 UNIDADES | CAJA MASTER ÚNICA</p>
+                            <hr>
+                            <br/>
+                        </div>
+                        <img src="images/packs_exhibidores/exhibidores_fotos.png" class="img-fluid">
+                        <!-- <div class="text-container">
+                            <div style="font-weight: bold;">TIPO</div>
+                            <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                            <br/>
+                        </div>
+                        <img src="images/pouch_trozos_atun/trozos_atun_indicaciones.png" class="img-fluid"> -->
+                        <!-- Extra Image moved here -->
+                        <!-- <div class="extra-image">
+                            <img src="fish.png" class="img-fluid">
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- <section id="lomitos" class="mb-5" style="text-align: center;">
+            <p style="font-family: Montserrat, bold;text-decoration: underline; text-underline-offset: 5px; font-size: 30px;"><strong>POUCH LOMO DE ATÚN</strong></p>
+            <br><br>
+            <div class="row">
+                <div class="col">
+                <img src="images/pouch_lomo_atun/lomo_atun_fotos.png" class="img-fluid">
+            </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 text-center">
+                    <div>
+                        <div style="font-weight: bold;">TIPO</div>
+                        <p class="mb-0">NATURAL | ACEITE DE GIRASOL | ACEITE DE OLIVA</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+        </section> -->
+    </div>
+    <!-- <br><br><br>
         <section id="trozos" class="mb-5" style="text-align: center;">
             <p style="font-family: Montserrat, bold;text-decoration: underline; text-underline-offset: 20px; font-size: 30px;"><strong>POUCH TROZOS DE ATÚN</strong></p>
             <br><br>
@@ -88,13 +315,13 @@
             </div>
 
 
-        </section>
+        </section> -->
 
 
-        <!-- Botón de regreso al menú -->
-        <button class="back-to-menu" onclick="scrollToMenu()">
-            <img src="btnfish.png" alt="UYTUNA" class="btn-fish">
-        </button>
+    <!-- Botón de regreso al menú -->
+    <button class="back-to-menu" onclick="scrollToMenu()">
+        <img src="btnfish.png" alt="UYTUNA" class="btn-fish">
+    </button>
 
     </div>
     <script src="js/functions.js"></script>
