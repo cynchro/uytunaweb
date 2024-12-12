@@ -63,6 +63,35 @@
         background-color: #0056b3;
         transform: scale(1.05);
     }
+    .bell-container {
+  display: inline-block;
+  position: relative;
+}
+
+.bell {
+  font-size: 17px;
+  color: #F36065;
+  animation: ring 1s ease-in-out infinite;
+}
+
+/* Efecto de "campana sonando" */
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 </style>
 
 </head>
@@ -82,6 +111,14 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav" style="text-align:left">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Catalogo.pdf" target="_blank"><div class="bell-container">
+                                    <i class="fa-regular fa-bell bell"></i>
+                                  </div>&nbsp;Descargar Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="nosotros.html">¿Quiénes somos?</a>
                             </li>
