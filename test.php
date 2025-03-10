@@ -1,3 +1,3 @@
 <?php
 
-echo 'soy un php';
+echo 'soy un script php';
